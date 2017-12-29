@@ -1,0 +1,164 @@
+[
+ {
+   "metricItem": "Cardio",
+   "attribute": "No",
+   "factor": 0,
+   "defaultUI": true
+ },
+ {
+   "metricItem": "Cardio",
+   "attribute": "Walk",
+   "factor": 10,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Cardio",
+   "attribute": "Bike",
+   "factor": 8,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Cigars",
+   "attribute": "No",
+   "factor": 10,
+   "defaultUI": true
+ },
+ {
+   "metricItem": "Cigars",
+   "attribute": "Yes",
+   "factor": 0,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Diet",
+   "attribute": "Healthy",
+   "factor": 8,
+   "defaultUI": true
+ },
+ {
+   "metricItem": "Diet",
+   "attribute": "Lean",
+   "factor": 10,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Diet",
+   "attribute": "Over Ate",
+   "factor": 0,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Lifting",
+   "attribute": "No",
+   "factor": 0,
+   "defaultUI": true
+ },
+ {
+   "metricItem": "Lifting",
+   "attribute": "Great",
+   "factor": 10,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Lifting",
+   "attribute": "Fair",
+   "factor": 8,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Lifting",
+   "attribute": "Poor",
+   "factor": 5,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Sleep",
+   "attribute": "Fair",
+   "factor": 8,
+   "defaultUI": true
+ },
+ {
+   "metricItem": "Sleep",
+   "attribute": "Great",
+   "factor": 10,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Sleep",
+   "attribute": "Poor",
+   "factor": 6,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Weight",
+   "attribute": "Even",
+   "factor": 8,
+   "defaultUI": true
+ },
+ {
+   "metricItem": "Weight",
+   "attribute": "Down",
+   "factor": 10,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Weight",
+   "attribute": "Up",
+   "factor": 0,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Wine",
+   "attribute": "Moderate",
+   "factor": 8,
+   "defaultUI": true
+ },
+ {
+   "metricItem": "Wine",
+   "attribute": "None",
+   "factor": 10,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Wine",
+   "attribute": "Too Much",
+   "factor": 0,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Organization",
+   "attribute": "Proactive",
+   "factor": 10,
+   "defaultUI": true
+ },
+ {
+   "metricItem": "Organization",
+   "attribute": "Procastinated",
+   "factor": 0,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Personal Development",
+   "attribute": "Aggressive",
+   "factor": 10,
+   "defaultUI": true
+ },
+ {
+   "metricItem": "Personal Development",
+   "attribute": "No",
+   "factor": 0,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Personal Development",
+   "attribute": "Moderate",
+   "factor": 8,
+   "defaultUI": false
+ },
+ {
+   "metricItem": "Personal Development",
+   "attribute": "Fair",
+   "factor": 6,
+   "defaultUI": false
+ }
+]
