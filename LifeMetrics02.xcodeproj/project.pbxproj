@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000D5CCA1FF6CDBD00D89ADC /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D5CC91FF6CDBD00D89ADC /* DatePickerVC.swift */; };
 		006CC0D61FF68A070071A182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D51FF68A070071A182 /* AppDelegate.swift */; };
 		006CC0D81FF68A070071A182 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D71FF68A070071A182 /* FirstViewController.swift */; };
 		006CC0DA1FF68A070071A182 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D91FF68A070071A182 /* SecondViewController.swift */; };
@@ -17,10 +18,11 @@
 		006CC0F71FF69F7B0071A182 /* CategorySubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0F61FF69F7B0071A182 /* CategorySubfileVC.swift */; };
 		006CC0FB1FF6A8210071A182 /* metricJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 006CC0FA1FF6A8210071A182 /* metricJson.json */; };
 		006CC0FF1FF6BE3D0071A182 /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0FE1FF6BE3D0071A182 /* DataManagement.swift */; };
-		006CC1011FF6C6680071A182 /* categoryJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 006CC1001FF6C6680071A182 /* categoryJson.json */; };
+		006CC1011FF6C6680071A182 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 006CC1001FF6C6680071A182 /* category.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000D5CC91FF6CDBD00D89ADC /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		006CC0D21FF68A070071A182 /* LifeMetrics02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeMetrics02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006CC0D51FF68A070071A182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		006CC0D71FF68A070071A182 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +35,7 @@
 		006CC0F61FF69F7B0071A182 /* CategorySubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySubfileVC.swift; sourceTree = "<group>"; };
 		006CC0FA1FF6A8210071A182 /* metricJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = metricJson.json; sourceTree = "<group>"; };
 		006CC0FE1FF6BE3D0071A182 /* DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
-		006CC1001FF6C6680071A182 /* categoryJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categoryJson.json; sourceTree = "<group>"; };
+		006CC1001FF6C6680071A182 /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				006CC0D91FF68A070071A182 /* SecondViewController.swift */,
 				006CC0D71FF68A070071A182 /* FirstViewController.swift */,
+				000D5CC91FF6CDBD00D89ADC /* DatePickerVC.swift */,
 				006CC0DB1FF68A070071A182 /* Main.storyboard */,
 				006CC0E01FF68A070071A182 /* LaunchScreen.storyboard */,
 				006CC0F61FF69F7B0071A182 /* CategorySubfileVC.swift */,
@@ -99,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				006CC0EE1FF68BF80071A182 /* Structures.swift */,
-				006CC1001FF6C6680071A182 /* categoryJson.json */,
+				006CC1001FF6C6680071A182 /* category.json */,
 				006CC0FA1FF6A8210071A182 /* metricJson.json */,
 				006CC0FE1FF6BE3D0071A182 /* DataManagement.swift */,
 			);
@@ -166,7 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				006CC0FB1FF6A8210071A182 /* metricJson.json in Resources */,
-				006CC1011FF6C6680071A182 /* categoryJson.json in Resources */,
+				006CC1011FF6C6680071A182 /* category.json in Resources */,
 				006CC0E21FF68A070071A182 /* LaunchScreen.storyboard in Resources */,
 				006CC0DF1FF68A070071A182 /* Assets.xcassets in Resources */,
 				006CC0DD1FF68A070071A182 /* Main.storyboard in Resources */,
@@ -182,6 +185,7 @@
 			files = (
 				006CC0DA1FF68A070071A182 /* SecondViewController.swift in Sources */,
 				006CC0D61FF68A070071A182 /* AppDelegate.swift in Sources */,
+				000D5CCA1FF6CDBD00D89ADC /* DatePickerVC.swift in Sources */,
 				006CC0FF1FF6BE3D0071A182 /* DataManagement.swift in Sources */,
 				006CC0D81FF68A070071A182 /* FirstViewController.swift in Sources */,
 				006CC0F71FF69F7B0071A182 /* CategorySubfileVC.swift in Sources */,

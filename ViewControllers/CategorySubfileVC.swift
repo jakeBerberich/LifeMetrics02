@@ -28,7 +28,7 @@ getJson()
         do {
             let data = try Data(contentsOf: url)
             self.metricCategoryArray = try JSONDecoder().decode([metricCategory].self, from: data)
-            print(metricCategoryArray)
+            metricCategoryArray.sort(by:{ $0.order < $1.order})
         } catch   { print("error")
             
         }
@@ -54,8 +54,9 @@ getJson()
 
         // Configure the cell...
         let categoryRow = self.metricCategoryArray[indexPath.row]
-categoryLabel.text = categoryRow.metric
-        
+// cell.categoryLabel?.text = categoryRow.metric
+     cell.textLabel?.text = categoryRow.metric
+        cell.detailTextLabel?.text = categoryRow.comments
         return cell
     }
     

@@ -1,55 +1,55 @@
 [
  {
-   "metricCategory": "Sleep",
+   "metric": "Sleep",
    "order": 10,
    "activated": true,
    "comments": "Quality of nights sleep"
  },
  {
-   "metricCategory": "Diet",
+   "metric": "Diet",
    "order": 20,
    "activated": true,
    "comments": "Food intake and quality"
  },
  {
-   "metricCategory": "Weight",
+   "metric": "Weight",
    "order": 30,
    "activated": true,
    "comments": "Body Weight Change"
  },
  {
-   "metricCategory": "Lifting",
+   "metric": "Lifting",
    "order": 40,
    "activated": true,
    "comments": "Gym Weights and TRX"
  },
  {
-   "metricCategory": "Cardio",
+   "metric": "Cardio",
    "order": 50,
    "activated": true,
    "comments": "Outdoor Walk & Indoor Cardio Machines"
  },
  {
-   "metricCategory": "Personal Development",
+   "metric": "Personal Development",
    "order": 60,
    "activated": true,
    "comments": "Time devoted to personal skills development"
  },
  {
-   "metricCategory": "Cigars",
+   "metric": "Cigars",
    "order": 70,
    "activated": true,
    "comments": "Had one"
  },
  {
-   "metricCategory": "Organization",
+   "metric": "Organization",
    "order": 80,
    "activated": true,
    "comments": "Subjective grade on daily organization"
  },
  {
-   "metricCategory": "Wine",
-   "order": 90,
+   "metric": "Wine",
+   "order": 25,
    "activated": true,
    "comments": "Alcohol intake"
  }
