@@ -11,7 +11,7 @@ import UIKit
 class CategorySubfileVC: UITableViewController {
     
     var metricCategoryArray = [metricCategory]()
-    var metricMeasurementArray = [metricItems]()
+    var metricItemArray = [metricItems]()
     @IBOutlet weak var categoryLabel: UILabel!
     
 
@@ -39,7 +39,7 @@ getJson()
         
         do {
             let data = try Data(contentsOf: url2)
-            self.metricMeasurementArray = try JSONDecoder().decode([metricItems].self, from: data)
+            self.metricItemArray = try JSONDecoder().decode([metricItems].self, from: data)
             
         } catch   { print("error")
             
@@ -50,7 +50,7 @@ getJson()
   // create an array subset for the selected category
     func buildPickerOptions<T>(choice: T ){
         let selection:String = choice as! String
-        let pickerOptions = metricMeasurementArray.filter({return $0.metricItem == selection})
+        let pickerOptions = metricItemArray.filter({return $0.metricItem == selection})
         print(pickerOptions)
     }
     

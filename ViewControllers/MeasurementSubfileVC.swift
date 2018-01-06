@@ -11,7 +11,7 @@ import UIKit
 
 class MeasurementSubfileVC: UITableViewController {
     
-    var metricMeasurementyArray = [metricItems]()
+    var metricItemArray = [metricItems]()
     @IBOutlet weak var categoryLabel: UILabel!
     
     
@@ -28,8 +28,8 @@ class MeasurementSubfileVC: UITableViewController {
         
         do {
             let data = try Data(contentsOf: url)
-            self.metricMeasurementyArray = try JSONDecoder().decode([metricItems].self, from: data)
-            metricMeasurementyArray.sort(by:{ $0.metricItem < $1.metricItem})
+            self.metricItemArray = try JSONDecoder().decode([metricItems].self, from: data)
+            metricItemArray.sort(by:{ $0.metricItem < $1.metricItem})
         } catch   { print("error")
             
         }
@@ -46,7 +46,7 @@ class MeasurementSubfileVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return metricMeasurementyArray.count
+        return metricItemArray.count
     }
     
     
@@ -54,7 +54,7 @@ class MeasurementSubfileVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         // Configure the cell...
-        let metricRow = self.metricMeasurementyArray[indexPath.row]
+        let metricRow = self.metricItemArray[indexPath.row]
         
         cell.textLabel?.text = metricRow.metricItem
         cell.detailTextLabel?.text = ("\(metricRow.attribute)   \( metricRow.defaultUI)")

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000D5CCA1FF6CDBD00D89ADC /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D5CC91FF6CDBD00D89ADC /* DatePickerVC.swift */; };
 		004F54371FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */; };
 		004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54381FF920D000E0AED4 /* ValuePickerVC.swift */; };
 		006CC0D61FF68A070071A182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D51FF68A070071A182 /* AppDelegate.swift */; };
@@ -24,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		000D5CC91FF6CDBD00D89ADC /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementSubfileVC.swift; sourceTree = "<group>"; };
 		004F54381FF920D000E0AED4 /* ValuePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePickerVC.swift; sourceTree = "<group>"; };
 		006CC0D21FF68A070071A182 /* LifeMetrics02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeMetrics02.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +83,6 @@
 			children = (
 				006CC0D91FF68A070071A182 /* SecondViewController.swift */,
 				006CC0D71FF68A070071A182 /* FirstViewController.swift */,
-				000D5CC91FF6CDBD00D89ADC /* DatePickerVC.swift */,
 				004F54381FF920D000E0AED4 /* ValuePickerVC.swift */,
 				006CC0DB1FF68A070071A182 /* Main.storyboard */,
 				006CC0E01FF68A070071A182 /* LaunchScreen.storyboard */,
@@ -192,7 +189,6 @@
 				006CC0DA1FF68A070071A182 /* SecondViewController.swift in Sources */,
 				004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */,
 				006CC0D61FF68A070071A182 /* AppDelegate.swift in Sources */,
-				000D5CCA1FF6CDBD00D89ADC /* DatePickerVC.swift in Sources */,
 				006CC0FF1FF6BE3D0071A182 /* DataManagement.swift in Sources */,
 				006CC0D81FF68A070071A182 /* FirstViewController.swift in Sources */,
 				006CC0F71FF69F7B0071A182 /* CategorySubfileVC.swift in Sources */,

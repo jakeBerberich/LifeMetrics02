@@ -31,8 +31,28 @@ struct personal {
     var gender: String
 }
 
+struct PickerValues {
+    var metric: String
+    var metricItems: [String]
+}
+
 var bodyMassIndex: Double = 0
 
-
+class Category {
+    var category: String
+    var metrics: [String]
     
+    
+    init(category: String, metrics:[String] ){
+        self.category = category
+        self.metrics = metrics
+        
+    }
+}
 
+struct DailyMetric {
+    var category: String
+    var metric: String
+    var score: Int
+    var forDate: String
+}

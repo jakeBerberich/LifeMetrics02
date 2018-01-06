@@ -11,80 +11,86 @@ import UIKit
 
 class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
-    class Category {
-        var category: String
-        var metrics: [String]
-
-        init(category: String, metrics:[String]) {
-            self.category = category
-            self.metrics = metrics
-        }
-    }
-    var categories = [Category]()
+  
     
-    
+    var categoryArray = [Category]()
+    var dateToReturn: String = "blanks"
     @IBOutlet weak var valueChoiceLabel: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var selectedDate: UILabel!
     
+    var metricItemArray = [metricItems]()   // raw values from Json
+    var metricCategoryArray = [metricCategory]()  // raw values from Json
     
-    
-var metricMeasurementArray = [metricItems]()
-var metricCategoryArray = [metricCategory]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        categories.append(Category(category: "Sleep", metrics: ["Great", "Fair", "Poor"]))
-        categories.append(Category(category: "Cardio", metrics: ["Walk", "Bike", "None"]))
-        categories.append(Category(category: "Weight", metrics: ["Even", "Down", "Up"]))
+            getJson()
+        buildPickerData()
+           pickerView.delegate = self
+           pickerView.dataSource = self
         
-        getJson()
-       pickerView.delegate = self
-        pickerView.dataSource = self
         
     }
+    
+        func buildPickerData() {
+        let subCategories = Set(metricItemArray.map{$0.metricItem})
+        print(subCategories)
+        for picker in subCategories {
+        let  filtered =  metricItemArray.filter({$0.metricItem == picker})
+            categoryArray.append(Category(category: picker, metrics: filtered.map({$0.attribute})))
+        }
+         
+    }
+    
+    @IBAction func selectThisDate(_ sender: Any) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        selectedDate.text = formatter.string(from: datePicker.date)
+        print(selectedDate.text!)
+        dateToReturn = formatter.string(from: datePicker.date)
+        
+    }
+    @IBAction func buildThisMeasurement(_ sender: Any) {
+    
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
       return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
-            return categories.count
+            return categoryArray.count
         }
         else {
             let selectedCategory = pickerView.selectedRow(inComponent: 0)
-            return categories[selectedCategory].metrics.count
+            return categoryArray[selectedCategory].metrics.count
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
-            return categories[row].category
+            return categoryArray[row].category
         }
         else {
             let selectedCategory = pickerView.selectedRow(inComponent: 0)
-            return categories[selectedCategory].metrics[row]
+            return categoryArray[selectedCategory].metrics[row]
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerView.reloadComponent(1)
         let selectedCategory = pickerView.selectedRow(inComponent: 0)
-        let selectedMetric = pickerView.selectedRow(inComponent: 1)
-        let category = categories[selectedCategory].category
-        let metric = categories[selectedCategory].metrics[selectedMetric]
+        let  selectedMetric = pickerView.selectedRow(inComponent: 1)
+        let category = categoryArray[selectedCategory].category
+        let metric = categoryArray[selectedCategory].metrics[selectedMetric]
         print ("selected: \(category)  \(metric)")
         valueChoiceLabel.text = ("Category: \(category)  Metric: \(metric)")
-        
     }
-    
-    // create an array subset for the selected category
-    func buildPickerOptions<T>(choice: T ) {
-        let selection:String = choice as Any as! String
-        let pickerOptions = metricMeasurementArray.filter({return $0.metricItem == selection})
-        print(pickerOptions)
         
-      
-    }
+ 
     
     func getJson() {
         let path = Bundle.main.path(forResource: "category", ofType: "json")
@@ -103,7 +109,7 @@ var metricCategoryArray = [metricCategory]()
         
         do {
             let data = try Data(contentsOf: url2)
-            self.metricMeasurementArray = try JSONDecoder().decode([metricItems].self, from: data)
+            self.metricItemArray = try JSONDecoder().decode([metricItems].self, from: data)
             
         } catch   { print("error")
             
