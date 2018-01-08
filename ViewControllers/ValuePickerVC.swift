@@ -14,7 +14,13 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
   
     
     var categoryArray = [Category]()
+    var dailyMetricArray = [DailyMetric]()
+    
     var dateToReturn: String = "blanks"
+    var findCategory: String = "blanks"
+    var findAtribute: String = "blanks"
+    var dailyScore: Int = 0
+    
     @IBOutlet weak var valueChoiceLabel: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -52,9 +58,33 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         dateToReturn = formatter.string(from: datePicker.date)
         
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerView.reloadComponent(1)
+        let selectedCategory = pickerView.selectedRow(inComponent: 0)
+        let  selectedMetric = pickerView.selectedRow(inComponent: 1)
+        let category = categoryArray[selectedCategory].category
+        let metric = categoryArray[selectedCategory].metrics[selectedMetric]
+       // print ("selected: \(category)  \(metric)")
+        valueChoiceLabel.text = ("Category: \(category)  Metric: \(metric)")
+        findCategory = category
+        findAtribute = metric
+    }
+    
+    
     @IBAction func buildThisMeasurement(_ sender: Any) {
+        
+        for item in metricItemArray where item.metricItem == findCategory && item.attribute == findAtribute {
+            print(" \(dateToReturn)  \(item.metricItem)  \(item.attribute)  \(item.factor)")
+            let daily = DailyMetric(category: item.metricItem, metric: item.attribute, score: item.factor, forDate: dateToReturn)
+            dailyMetricArray.append(daily)
+            print(dailyMetricArray)
+        }
     
     }
+    
+    
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
       return 2
@@ -80,16 +110,7 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         }
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pickerView.reloadComponent(1)
-        let selectedCategory = pickerView.selectedRow(inComponent: 0)
-        let  selectedMetric = pickerView.selectedRow(inComponent: 1)
-        let category = categoryArray[selectedCategory].category
-        let metric = categoryArray[selectedCategory].metrics[selectedMetric]
-        print ("selected: \(category)  \(metric)")
-        valueChoiceLabel.text = ("Category: \(category)  Metric: \(metric)")
-    }
-        
+  
  
     
     func getJson() {
