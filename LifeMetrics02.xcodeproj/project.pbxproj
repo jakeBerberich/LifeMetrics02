@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		004F54371FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */; };
 		004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54381FF920D000E0AED4 /* ValuePickerVC.swift */; };
+		004F545F200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */; };
 		006CC0D61FF68A070071A182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D51FF68A070071A182 /* AppDelegate.swift */; };
 		006CC0D81FF68A070071A182 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D71FF68A070071A182 /* FirstViewController.swift */; };
 		006CC0DA1FF68A070071A182 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D91FF68A070071A182 /* SecondViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementSubfileVC.swift; sourceTree = "<group>"; };
 		004F54381FF920D000E0AED4 /* ValuePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePickerVC.swift; sourceTree = "<group>"; };
+		004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceSummarySubfileVC.swift; sourceTree = "<group>"; };
 		006CC0D21FF68A070071A182 /* LifeMetrics02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeMetrics02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006CC0D51FF68A070071A182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		006CC0D71FF68A070071A182 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				006CC0E01FF68A070071A182 /* LaunchScreen.storyboard */,
 				006CC0F61FF69F7B0071A182 /* CategorySubfileVC.swift */,
 				004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */,
+				004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				006CC0DA1FF68A070071A182 /* SecondViewController.swift in Sources */,
+				004F545F200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift in Sources */,
 				004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */,
 				006CC0D61FF68A070071A182 /* AppDelegate.swift in Sources */,
 				006CC0FF1FF6BE3D0071A182 /* DataManagement.swift in Sources */,

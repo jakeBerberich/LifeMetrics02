@@ -36,6 +36,7 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         buildPickerData()
            pickerView.delegate = self
            pickerView.dataSource = self
+      inzDateValue()
         
         
     }
@@ -49,7 +50,14 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         }
          
     }
-    
+    func inzDateValue() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        selectedDate.text = formatter.string(from: datePicker.date)
+        print(selectedDate.text!)
+        dateToReturn = formatter.string(from: datePicker.date)
+        
+    }
     @IBAction func selectThisDate(_ sender: Any) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -138,6 +146,14 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         let destinationVC = segue.destination as! ChoiceSummarySubfileVC
+        destinationVC.dailyMetricArray = dailyMetricArray
+    }
     
-    
+    @IBAction func unwindBack(sender: UIStoryboardSegue) {
+        let sourceViewController = sender.source as! ChoiceSummarySubfileVC
+        dailyMetricArray = sourceViewController.dailyMetricArray
+        
+    }
 }
