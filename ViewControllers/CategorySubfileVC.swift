@@ -12,45 +12,29 @@ class CategorySubfileVC: UITableViewController {
     
     var metricCategoryArray = [metricCategory]()
     var metricItemArray = [metricItems]()
+    
+    
+     let remoteJobs = RemoteFunctions() // create instance for call remote functions
+    
     @IBOutlet weak var categoryLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getJson()
+        returnJson()
         
+    }
+    func returnJson() { // decode Json to arrays
+        metricItemArray = remoteJobs.returnJson().0
+        metricCategoryArray = remoteJobs.returnJson().1
     }
     
-    func getJson() {
-        let path = Bundle.main.path(forResource: "category", ofType: "json")
-        let url = URL(fileURLWithPath: path!)
-        
-        do {
-            let data = try Data(contentsOf: url)
-            self.metricCategoryArray = try JSONDecoder().decode([metricCategory].self, from: data)
-            metricCategoryArray.sort(by:{ $0.order < $1.order})
-        } catch   { print("error")
-            
-        }
-        //-------------
-        let path2 = Bundle.main.path(forResource: "metric", ofType: "json")
-        let url2 = URL(fileURLWithPath: path2!)
-        
-        do {
-            let data = try Data(contentsOf: url2)
-            self.metricItemArray = try JSONDecoder().decode([metricItems].self, from: data)
-            
-        } catch   { print("error")
-            
-        }
-        
-        
-    }
+ 
   // create an array subset for the selected category
     func buildPickerOptions<T>(choice: T ){
         let selection:String = choice as! String
         let pickerOptions = metricItemArray.filter({return $0.metricItem == selection})
-        print(pickerOptions)
+      
     }
     
     

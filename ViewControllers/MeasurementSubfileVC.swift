@@ -11,30 +11,25 @@ import UIKit
 
 class MeasurementSubfileVC: UITableViewController {
     
+ 
+    var metricCategoryArray = [metricCategory]()
     var metricItemArray = [metricItems]()
+    
     @IBOutlet weak var categoryLabel: UILabel!
+    let remoteJobs = RemoteFunctions() // create instance for call remote functions
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getJson()
-        
-        
+     returnJson()
     }
     
-    func getJson() {
-        let path = Bundle.main.path(forResource: "metric", ofType: "json")
-        let url = URL(fileURLWithPath: path!)
-        
-        do {
-            let data = try Data(contentsOf: url)
-            self.metricItemArray = try JSONDecoder().decode([metricItems].self, from: data)
-            metricItemArray.sort(by:{ $0.metricItem < $1.metricItem})
-        } catch   { print("error")
-            
-        }
-        
+    func returnJson() { // decode Json to arrays
+        metricItemArray = remoteJobs.returnJson().0
+        metricCategoryArray = remoteJobs.returnJson().1
     }
+    
+  
     
     // MARK: - Table view data source
     

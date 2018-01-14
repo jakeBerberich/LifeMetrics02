@@ -68,8 +68,7 @@ class ChoiceSummarySubfileVC: UITableViewController {
 
     @IBAction func saveTheDay(_ sender: Any) {
         print("save the day")
-        var myData = remoteJobs.returnSomeData()
-        print(myData)
+     
     }
     
     

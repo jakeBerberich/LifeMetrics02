@@ -21,6 +21,7 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     var findCategory: String = "blanks"
     var findAtribute: String = "blanks"
     var dailyScore: Int = 0
+    let remoteJobs = RemoteFunctions() // create instance for call remote functions
     
     @IBOutlet weak var valueChoiceLabel: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
@@ -33,7 +34,7 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getJson()
+      returnJson()
         buildPickerData()
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -44,7 +45,6 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
         func buildPickerData() {
         let subCategories = Set(metricItemArray.map{$0.metricItem})
-        print(subCategories)
         for picker in subCategories {
         let  filtered =  metricItemArray.filter({$0.metricItem == picker})
             categoryArray.append(Category(category: picker, metrics: filtered.map({$0.attribute})))
@@ -55,7 +55,7 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         selectedDate.text = formatter.string(from: datePicker.date)
-        print(selectedDate.text!)
+       
         dateToReturn = formatter.string(from: datePicker.date)
          let formatterDayOfWeek = DateFormatter()
         formatterDayOfWeek.dateFormat = "EEEE"
@@ -68,10 +68,10 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         formatter.dateFormat = "yyyy-MM-dd"
         formatterDayOfWeek.dateFormat = "EEEE"
         selectedDate.text = formatter.string(from: datePicker.date)
-        print(selectedDate.text!)
+       
         dateToReturn = formatter.string(from: datePicker.date)
         dayNameToReturn = formatterDayOfWeek.string(from: datePicker.date)
-        print(dayNameToReturn)
+//        print(dayNameToReturn)
         
     }
     
@@ -91,10 +91,10 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     @IBAction func buildThisMeasurement(_ sender: Any) {
         
         for item in metricItemArray where item.metricItem == findCategory && item.attribute == findAtribute {
-            print(" \(dateToReturn)  \(item.metricItem)  \(item.attribute)  \(item.factor)")
+//            print(" \(dateToReturn)  \(item.metricItem)  \(item.attribute)  \(item.factor)")
             let daily = DailyMetric(category: item.metricItem, metric: item.attribute, score: item.factor, forDate: dateToReturn, dayName: dayNameToReturn)
             dailyMetricArray.append(daily)
-            print(dailyMetricArray)
+//            print(dailyMetricArray)
         }
     
     }
@@ -126,34 +126,12 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         }
     }
     
-  
- 
-    
-    func getJson() {
-        let path = Bundle.main.path(forResource: "category", ofType: "json")
-        let url = URL(fileURLWithPath: path!)
-        
-        do {
-            let data = try Data(contentsOf: url)
-            self.metricCategoryArray = try JSONDecoder().decode([metricCategory].self, from: data)
-            metricCategoryArray.sort(by:{ $0.order < $1.order})
-        } catch   { print("error")
-            
-        }
-        //-------------
-        let path2 = Bundle.main.path(forResource: "metric", ofType: "json")
-        let url2 = URL(fileURLWithPath: path2!)
-        
-        do {
-            let data = try Data(contentsOf: url2)
-            self.metricItemArray = try JSONDecoder().decode([metricItems].self, from: data)
-            
-        } catch   { print("error")
-            
-        }
-        
-        
+    func returnJson() { // decode Json to arrays
+        metricItemArray = remoteJobs.returnJson().0
+        metricCategoryArray = remoteJobs.returnJson().1
     }
+    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          let destinationVC = segue.destination as! ChoiceSummarySubfileVC
         destinationVC.dailyMetricArray = dailyMetricArray
