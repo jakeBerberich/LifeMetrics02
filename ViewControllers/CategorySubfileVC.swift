@@ -17,13 +17,12 @@ class CategorySubfileVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-getJson()
-      buildPickerOptions(choice: "Sleep")
-        buildPickerOptions(choice: "Cardio")
+        getJson()
+        
     }
-
+    
     func getJson() {
-     let path = Bundle.main.path(forResource: "category", ofType: "json")
+        let path = Bundle.main.path(forResource: "category", ofType: "json")
         let url = URL(fileURLWithPath: path!)
         
         do {
@@ -33,7 +32,7 @@ getJson()
         } catch   { print("error")
             
         }
-//-------------
+        //-------------
         let path2 = Bundle.main.path(forResource: "metric", ofType: "json")
         let url2 = URL(fileURLWithPath: path2!)
         

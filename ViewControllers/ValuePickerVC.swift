@@ -17,6 +17,7 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     var dailyMetricArray = [DailyMetric]()
     
     var dateToReturn: String = "blanks"
+    var dayNameToReturn: String = "blanks"
     var findCategory: String = "blanks"
     var findAtribute: String = "blanks"
     var dailyScore: Int = 0
@@ -32,11 +33,11 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            getJson()
+        getJson()
         buildPickerData()
-           pickerView.delegate = self
-           pickerView.dataSource = self
-      inzDateValue()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        inzInitalValues()
         
         
     }
@@ -50,20 +51,27 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         }
          
     }
-    func inzDateValue() {
+    func inzInitalValues() {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         selectedDate.text = formatter.string(from: datePicker.date)
         print(selectedDate.text!)
         dateToReturn = formatter.string(from: datePicker.date)
-        
+         let formatterDayOfWeek = DateFormatter()
+        formatterDayOfWeek.dateFormat = "EEEE"
+        dayNameToReturn = formatterDayOfWeek.string(from: datePicker.date)
     }
+    
     @IBAction func selectThisDate(_ sender: Any) {
         let formatter = DateFormatter()
+        let formatterDayOfWeek = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
+        formatterDayOfWeek.dateFormat = "EEEE"
         selectedDate.text = formatter.string(from: datePicker.date)
         print(selectedDate.text!)
         dateToReturn = formatter.string(from: datePicker.date)
+        dayNameToReturn = formatterDayOfWeek.string(from: datePicker.date)
+        print(dayNameToReturn)
         
     }
     
@@ -84,7 +92,7 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         for item in metricItemArray where item.metricItem == findCategory && item.attribute == findAtribute {
             print(" \(dateToReturn)  \(item.metricItem)  \(item.attribute)  \(item.factor)")
-            let daily = DailyMetric(category: item.metricItem, metric: item.attribute, score: item.factor, forDate: dateToReturn)
+            let daily = DailyMetric(category: item.metricItem, metric: item.attribute, score: item.factor, forDate: dateToReturn, dayName: dayNameToReturn)
             dailyMetricArray.append(daily)
             print(dailyMetricArray)
         }

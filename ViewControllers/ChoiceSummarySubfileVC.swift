@@ -11,13 +11,22 @@ import UIKit
 class ChoiceSummarySubfileVC: UITableViewController {
    
     var dailyMetricArray = [DailyMetric]()
+    var allMetricArray = [DailyMetric]()
+    var allDailySummary = [DailyMetric]()
+    let remoteJobs = RemoteFunctions() // create instance for call remote functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        summarizeDay()
     }
 
+    func summarizeDay() {
+        let scoreArray: [Int] = dailyMetricArray.map({return $0.score})
+        let  dailyTotal: Int = scoreArray.reduce(0, +)
+        let newday = DailySummary(forDate: dailyMetricArray[0].forDate, dayName: dailyMetricArray[0].dayName, totalScore: dailyTotal)
+        print(" Daily total \(newday)")
+        
+    }
     
     // MARK: - Table view data source
 
@@ -37,18 +46,12 @@ class ChoiceSummarySubfileVC: UITableViewController {
         let dailyRow = self.dailyMetricArray[indexPath.row]
         // Configure the cell...
         cell.textLabel?.text = ("\(dailyRow.category)  \(dailyRow.metric)")
-        cell.detailTextLabel?.text = ("\(dailyRow.forDate) ")
+        cell.detailTextLabel?.text = (" \(dailyRow.dayName)  \(dailyRow.forDate) ")
         return cell
     }
  
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+ 
 
     
     // Override to support editing the table view.
@@ -63,7 +66,13 @@ class ChoiceSummarySubfileVC: UITableViewController {
     }
   
 
-   
+    @IBAction func saveTheDay(_ sender: Any) {
+        print("save the day")
+        var myData = remoteJobs.returnSomeData()
+        print(myData)
+    }
+    
+    
     
 
 }

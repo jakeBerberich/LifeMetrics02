@@ -10,6 +10,7 @@
 		004F54371FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */; };
 		004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54381FF920D000E0AED4 /* ValuePickerVC.swift */; };
 		004F545F200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */; };
+		004F5461200A88D100E0AED4 /* AboutMeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F5460200A88D100E0AED4 /* AboutMeTableVC.swift */; };
 		006CC0D61FF68A070071A182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D51FF68A070071A182 /* AppDelegate.swift */; };
 		006CC0D81FF68A070071A182 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D71FF68A070071A182 /* FirstViewController.swift */; };
 		006CC0DA1FF68A070071A182 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0D91FF68A070071A182 /* SecondViewController.swift */; };
@@ -21,12 +22,14 @@
 		006CC0FB1FF6A8210071A182 /* metric.json in Resources */ = {isa = PBXBuildFile; fileRef = 006CC0FA1FF6A8210071A182 /* metric.json */; };
 		006CC0FF1FF6BE3D0071A182 /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0FE1FF6BE3D0071A182 /* DataManagement.swift */; };
 		006CC1011FF6C6680071A182 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 006CC1001FF6C6680071A182 /* category.json */; };
+		00DC5256200BA48700B52D6C /* RemoteFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5255200BA48700B52D6C /* RemoteFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementSubfileVC.swift; sourceTree = "<group>"; };
 		004F54381FF920D000E0AED4 /* ValuePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePickerVC.swift; sourceTree = "<group>"; };
 		004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceSummarySubfileVC.swift; sourceTree = "<group>"; };
+		004F5460200A88D100E0AED4 /* AboutMeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeTableVC.swift; sourceTree = "<group>"; };
 		006CC0D21FF68A070071A182 /* LifeMetrics02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeMetrics02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006CC0D51FF68A070071A182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		006CC0D71FF68A070071A182 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		006CC0FA1FF6A8210071A182 /* metric.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = metric.json; sourceTree = "<group>"; };
 		006CC0FE1FF6BE3D0071A182 /* DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
 		006CC1001FF6C6680071A182 /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
+		00DC5255200BA48700B52D6C /* RemoteFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				006CC0F61FF69F7B0071A182 /* CategorySubfileVC.swift */,
 				004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */,
 				004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */,
+				004F5460200A88D100E0AED4 /* AboutMeTableVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 				006CC1001FF6C6680071A182 /* category.json */,
 				006CC0FA1FF6A8210071A182 /* metric.json */,
 				006CC0FE1FF6BE3D0071A182 /* DataManagement.swift */,
+				00DC5255200BA48700B52D6C /* RemoteFunctions.swift */,
 			);
 			path = "Model Info";
 			sourceTree = "<group>";
@@ -189,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00DC5256200BA48700B52D6C /* RemoteFunctions.swift in Sources */,
 				006CC0DA1FF68A070071A182 /* SecondViewController.swift in Sources */,
 				004F545F200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift in Sources */,
 				004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */,
@@ -196,6 +203,7 @@
 				006CC0FF1FF6BE3D0071A182 /* DataManagement.swift in Sources */,
 				006CC0D81FF68A070071A182 /* FirstViewController.swift in Sources */,
 				006CC0F71FF69F7B0071A182 /* CategorySubfileVC.swift in Sources */,
+				004F5461200A88D100E0AED4 /* AboutMeTableVC.swift in Sources */,
 				004F54371FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift in Sources */,
 				006CC0EF1FF68BF80071A182 /* Structures.swift in Sources */,
 			);
