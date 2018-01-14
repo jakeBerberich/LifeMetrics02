@@ -24,6 +24,7 @@ struct metricItems: Codable {
 struct Personal {
     var myName: String
     var birthDate: Date
+    var phoenixDate: Date
     var startBodyWeight: Double
     var targetBodyWeight: Double
     var currentBodyWeight: Int
@@ -58,7 +59,7 @@ struct DailyMetric {
     var dayName: String
 }
 
-struct DailySummary  {
+struct DailySummary: Codable  {
     var forDate: String
     var dayName: String
     var totalScore: Int

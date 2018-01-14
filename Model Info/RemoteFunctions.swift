@@ -10,18 +10,59 @@ import Foundation
 class RemoteFunctions {
     var metricCategoryArray = [metricCategory]()
     var metricItemArray = [metricItems]()
+    var allDailySummaryArray = [DailySummary]() // all the daily metric details
+    var allMetricArray = [DailyMetric]()
+    var allDailySummaryKey: String = "allDailySummary"
     
-//    func performRemoteJob() {
-//        print("do remote stuff")
-//        var remoteValue: String = "remote String Value"
-//        print(remoteValue)
-//    }
-//    
-//    func returnSomeData() -> (String) {
-//        var returnData: String = "jakeMan"
-//        return returnData
-//    }
-    
+    var jsonEncoder = JSONEncoder()
+    var jsonDecoder = JSONDecoder()
+//----------------------------------------------------------------------------------------------------------------------------
+    func returnStoredData()-> [DailySummary] {
+        // return a stored json string from userDefaults
+        var getBack = UserDefaults.standard.object(forKey: allDailySummaryKey) as!  String
+        print("return from User Defaults \(getBack)")
+        // the returned string has an extra set of [] that need to be droped
+        let sliced = String(getBack.characters.dropFirst())
+        let sliced2 = String(sliced.characters.dropLast())
+        getBack = sliced2 // slimmed down Json string
+        
+        let newJsonData = getBack.data(using: .utf8)! // convert string back to Data
+        print("new json data \(newJsonData)")
+        
+        
+            if let newData = getBack.data(using: String.Encoding.utf8) {
+                print("value of new data \(newData)")
+                do {
+                    let decoder = JSONDecoder()
+                     self.allDailySummaryArray =  try decoder.decode([DailySummary].self , from: newData)
+                    
+                    for items in allDailySummaryArray {
+                        print(items.dayName)
+                    }
+                }
+                catch { print("error")
+        
+                }
+            }
+        return (allDailySummaryArray)
+    }
+//----------------------------------------------------------------------------------------------------------------------------
+    func writeJsonToStorage(inArray:[DailySummary])  {
+        
+            do {
+              let jsonData = try  jsonEncoder.encode([inArray])
+                let jsonString = String(data: jsonData, encoding: .utf8)
+                if  let jsonString = jsonString {
+                    print("encoding the string \(jsonString)")
+        
+                    UserDefaults.standard.set(jsonString, forKey: allDailySummaryKey)
+                }
+        
+            } catch { print("error in encoding")
+        
+        }
+    }
+//----------------------------------------------------------------------------------------------------------------------------
     func returnJson() -> ([metricItems], [metricCategory]) {
  
         let path = Bundle.main.path(forResource: "category", ofType: "json")
@@ -47,5 +88,5 @@ class RemoteFunctions {
         
         return (metricItemArray, metricCategoryArray)
     }
-    
+//----------------------------------------------------------------------------------------------------------------------------
     }

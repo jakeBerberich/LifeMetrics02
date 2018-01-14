@@ -9,7 +9,9 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    @IBOutlet weak var restoreDailyLabel: UIButton!
+    
+    let remoteJobs = RemoteFunctions() // create instance for call remote functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +23,9 @@ class FirstViewController: UIViewController {
     }
 
 
+    @IBAction func testRestoreFromUserData(_ sender: Any) {
+      let restoredDaily =  remoteJobs.returnStoredData()
+        print(restoredDaily)
+    }
 }
 
