@@ -12,6 +12,12 @@
    "comments": "Food intake and quality"
  },
  {
+ "metric": "Water",
+ "order": 21,
+ "activated": true,
+ "comments": "Daily Hydration"
+ },
+ {
    "metric": "Weight",
    "order": 30,
    "activated": true,

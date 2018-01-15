@@ -11,7 +11,7 @@ import UIKit
 class ChoiceSummarySubfileVC: UITableViewController {
    
     var dailyMetricArray = [DailyMetric]()
-    var allMetricArray = [DailyMetric]()
+    var allDailyMetricArray = [DailyMetric]()
     var allDailySummary = [DailySummary]()
     let remoteJobs = RemoteFunctions() // create instance for call remote functions
     
@@ -46,15 +46,19 @@ class ChoiceSummarySubfileVC: UITableViewController {
  
     
     @IBAction func saveTheDay(_ sender: Any) {
-        print("save the day")
         let scoreArray: [Int] = dailyMetricArray.map({return $0.score})
         let  dailyTotal: Int = scoreArray.reduce(0, +)
         let newDay = DailySummary(forDate: dailyMetricArray[0].forDate, dayName: dailyMetricArray[0].dayName, totalScore: dailyTotal)
+        
+        
         allDailySummary =  remoteJobs.returnStoredData()
         allDailySummary.append(newDay)
-        print(" Daily total \(newDay)")
         remoteJobs.writeJsonToStorage(inArray: allDailySummary)
-    
+        allDailyMetricArray = remoteJobs.returnDailyDetail()
+        for item in dailyMetricArray {
+            allDailyMetricArray.append(item)
+        }
+        remoteJobs.dailyDetailToStorage(inArray: allDailyMetricArray)
     }
 
  

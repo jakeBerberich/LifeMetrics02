@@ -10,8 +10,7 @@ import UIKit
 
 class CategorySubfileVC: UITableViewController {
     
-    var metricCategoryArray = [metricCategory]()
-    var metricItemArray = [metricItems]()
+var allDailyMetricArray = [DailyMetric]()
     
     
      let remoteJobs = RemoteFunctions() // create instance for call remote functions
@@ -21,20 +20,11 @@ class CategorySubfileVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        returnJson()
+        returnAllDailyMetrics()
         
     }
-    func returnJson() { // decode Json to arrays
-        metricItemArray = remoteJobs.returnJson().0
-        metricCategoryArray = remoteJobs.returnJson().1
-    }
-    
- 
-  // create an array subset for the selected category
-    func buildPickerOptions<T>(choice: T ){
-        let selection:String = choice as! String
-        let pickerOptions = metricItemArray.filter({return $0.metricItem == selection})
-      
+    func returnAllDailyMetrics() { // decode Json to arrays
+        allDailyMetricArray = remoteJobs.returnDailyDetail()
     }
     
     
@@ -48,7 +38,7 @@ class CategorySubfileVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return metricCategoryArray.count
+        return allDailyMetricArray.count
     }
 
     
@@ -56,10 +46,10 @@ class CategorySubfileVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
-        let categoryRow = self.metricCategoryArray[indexPath.row]
-// cell.categoryLabel?.text = categoryRow.metric
-     cell.textLabel?.text = categoryRow.metric
-        cell.detailTextLabel?.text = categoryRow.comments
+        let categoryRow = self.allDailyMetricArray[indexPath.row]
+        // cell.categoryLabel?.text = categoryRow.metric
+        cell.textLabel?.text = ("Category: \(categoryRow.category)  \(categoryRow.forDate)")
+        cell.detailTextLabel?.text = categoryRow.dayName
         return cell
     }
     

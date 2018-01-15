@@ -12,8 +12,8 @@ import UIKit
 class MeasurementSubfileVC: UITableViewController {
     
  
-    var metricCategoryArray = [metricCategory]()
-    var metricItemArray = [metricItems]()
+    var allDailyArray = [DailySummary]()
+    
     
     @IBOutlet weak var categoryLabel: UILabel!
     let remoteJobs = RemoteFunctions() // create instance for call remote functions
@@ -21,13 +21,18 @@ class MeasurementSubfileVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     returnJson()
+     returnDailySummary()
+    }
+   
+    
+    
+    
+    func returnDailySummary() { // decode Json to
+        allDailyArray =  remoteJobs.returnStoredData()
+        
     }
     
-    func returnJson() { // decode Json to arrays
-        metricItemArray = remoteJobs.returnJson().0
-        metricCategoryArray = remoteJobs.returnJson().1
-    }
+
     
   
     
@@ -41,7 +46,7 @@ class MeasurementSubfileVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return metricItemArray.count
+        return allDailyArray.count
     }
     
     
@@ -49,10 +54,10 @@ class MeasurementSubfileVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         // Configure the cell...
-        let metricRow = self.metricItemArray[indexPath.row]
+        let metricRow = self.allDailyArray[indexPath.row]
         
-        cell.textLabel?.text = metricRow.metricItem
-        cell.detailTextLabel?.text = ("\(metricRow.attribute)   \( metricRow.defaultUI)")
+        cell.textLabel?.text = metricRow.forDate
+        cell.detailTextLabel?.text = ("\(metricRow.totalScore)   \( metricRow.dayName)")
         return cell
     }
     

@@ -160,5 +160,23 @@
    "attribute": "Fair",
    "factor": 6,
    "defaultUI": false
+ },
+ {
+ "metricItem": "Water",
+ "attribute": "Considerable",
+ "factor": 10,
+ "defaultUI": false
+ },
+ {
+ "metricItem": "Water",
+ "attribute": "Ample",
+ "factor": 8,
+ "defaultUI": false
+ },
+ {
+ "metricItem": "Water",
+ "attribute": "Fair",
+ "factor": 6,
+ "defaultUI": false
  }
-]
+ ]

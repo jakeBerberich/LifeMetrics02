@@ -25,7 +25,8 @@ class FirstViewController: UIViewController {
 
     @IBAction func testRestoreFromUserData(_ sender: Any) {
       let restoredDaily =  remoteJobs.returnStoredData()
-        print(restoredDaily)
+        let restoredDetail = remoteJobs.returnDailyDetail()
+        print(restoredDetail)
     }
 }
 

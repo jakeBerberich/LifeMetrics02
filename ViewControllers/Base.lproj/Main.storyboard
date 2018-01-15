@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
-                            <tableViewSection id="30Y-Vm-ERK">
+                            <tableViewSection id="rL5-oB-Rj1">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="983-7D-ek8" detailTextLabel="mcA-4N-Yay" style="IBUITableViewCellStyleSubtitle" id="xM2-u9-jJN">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -108,8 +108,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QLe-or-MvD">
-                                                    <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="ageDates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QLe-or-MvD">
+                                                    <rect key="frame" x="16" y="25.5" width="54" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -125,15 +125,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="phoenixDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zpz-ag-G4m">
-                                                    <rect key="frame" x="16" y="5" width="96.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Phoenix Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zpz-ag-G4m">
+                                                    <rect key="frame" x="16" y="5" width="101.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6kZ-2q-xtH">
-                                                    <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="agePhoenix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6kZ-2q-xtH">
+                                                    <rect key="frame" x="16" y="25.5" width="66" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="kti-dD-S5L" detailTextLabel="nFK-3H-19C" style="IBUITableViewCellStyleSubtitle" id="Cmm-zs-Jeh">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cmm-zs-Jeh" id="s4v-B8-fB2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="BMI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kti-dD-S5L">
+                                                    <rect key="frame" x="16" y="5" width="29.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="agePhoenix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nFK-3H-19C">
+                                                    <rect key="frame" x="16" y="25.5" width="66" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -152,7 +176,10 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="About Me" id="bzj-1T-CmC"/>
                     <connections>
+                        <outlet property="ageDatesLabel" destination="QLe-or-MvD" id="yIn-oH-hyp"/>
+                        <outlet property="agePhoenixLabel" destination="6kZ-2q-xtH" id="Nq4-5z-oY8"/>
                         <outlet property="birthdayLabel" destination="R1T-Eb-Tqk" id="4o6-0d-M9p"/>
+                        <outlet property="bmiLabel" destination="nFK-3H-19C" id="M5w-n6-kD2"/>
                         <outlet property="myNameLabel" destination="983-7D-ek8" id="SZO-pt-z85"/>
                         <outlet property="phoenixDateLabel" destination="Zpz-ag-G4m" id="8ng-oS-xWA"/>
                         <outlet property="sinceBornLabel" destination="mcA-4N-Yay" id="nXI-ql-epK"/>
@@ -216,10 +243,10 @@
             </objects>
             <point key="canvasLocation" x="720.79999999999995" y="1009.7451274362819"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Daily Scores-->
         <scene sceneID="Orh-dW-p2V">
             <objects>
-                <tableViewController id="5oY-kl-VhL" customClass="MeasurementSubfileVC" customModule="LifeMetrics02" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Daily Scores" id="5oY-kl-VhL" customClass="MeasurementSubfileVC" customModule="LifeMetrics02" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5QP-we-91y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,7 +282,7 @@
                             <outlet property="delegate" destination="5oY-kl-VhL" id="bDO-B5-F8S"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Measurements" id="ESj-YZ-2vO"/>
+                    <tabBarItem key="tabBarItem" title="Daily Scores" id="ESj-YZ-2vO"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="9bl-am-d8n"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7T-xm-AyV" userLabel="First Responder" sceneMemberID="firstResponder"/>

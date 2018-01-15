@@ -27,8 +27,8 @@ struct Personal {
     var phoenixDate: Date
     var startBodyWeight: Double
     var targetBodyWeight: Double
-    var currentBodyWeight: Int
-    var heightInches: Double
+    var currentBodyWeight: Float
+    var heightInches: Float
     var gender: String
 }
 
@@ -51,7 +51,7 @@ class Category {
     }
 }
 
-struct DailyMetric {
+struct DailyMetric: Codable {
     var category: String
     var metric: String
     var score: Int
