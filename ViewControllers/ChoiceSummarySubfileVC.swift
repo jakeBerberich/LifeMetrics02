@@ -50,11 +50,14 @@ class ChoiceSummarySubfileVC: UITableViewController {
         let  dailyTotal: Int = scoreArray.reduce(0, +)
         let newDay = DailySummary(forDate: dailyMetricArray[0].forDate, dayName: dailyMetricArray[0].dayName, totalScore: dailyTotal)
         
-        
-        allDailySummary =  remoteJobs.returnStoredData()
+     
+            allDailySummary = remoteJobs.returnStoredData() // data will not initally be present on first run
+    
         allDailySummary.append(newDay)
-        remoteJobs.writeJsonToStorage(inArray: allDailySummary)
-        allDailyMetricArray = remoteJobs.returnDailyDetail()
+        remoteJobs.writeJsonToStorage(inArray: allDailySummary) // store data locally
+       
+        allDailyMetricArray =  remoteJobs.returnDailyDetail()
+   
         for item in dailyMetricArray {
             allDailyMetricArray.append(item)
         }

@@ -22,6 +22,7 @@
 		006CC0FB1FF6A8210071A182 /* metric.json in Resources */ = {isa = PBXBuildFile; fileRef = 006CC0FA1FF6A8210071A182 /* metric.json */; };
 		006CC1011FF6C6680071A182 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 006CC1001FF6C6680071A182 /* category.json */; };
 		00DC5256200BA48700B52D6C /* RemoteFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5255200BA48700B52D6C /* RemoteFunctions.swift */; };
+		00DC5258200D395900B52D6C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5257200D395900B52D6C /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		006CC0FA1FF6A8210071A182 /* metric.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = metric.json; sourceTree = "<group>"; };
 		006CC1001FF6C6680071A182 /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
 		00DC5255200BA48700B52D6C /* RemoteFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFunctions.swift; sourceTree = "<group>"; };
+		00DC5257200D395900B52D6C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				006CC1001FF6C6680071A182 /* category.json */,
 				006CC0FA1FF6A8210071A182 /* metric.json */,
 				00DC5255200BA48700B52D6C /* RemoteFunctions.swift */,
+				00DC5257200D395900B52D6C /* Alert.swift */,
 			);
 			path = "Model Info";
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				006CC0D81FF68A070071A182 /* FirstViewController.swift in Sources */,
 				006CC0F71FF69F7B0071A182 /* CategorySubfileVC.swift in Sources */,
 				004F5461200A88D100E0AED4 /* AboutMeTableVC.swift in Sources */,
+				00DC5258200D395900B52D6C /* Alert.swift in Sources */,
 				004F54371FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift in Sources */,
 				006CC0EF1FF68BF80071A182 /* Structures.swift in Sources */,
 			);

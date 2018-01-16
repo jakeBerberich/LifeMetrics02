@@ -6,6 +6,12 @@
    "comments": "Quality of nights sleep"
  },
  {
+ "metric": "Eat at Home",
+ "order": 15,
+ "activated": true,
+ "comments": "Dinner at Home"
+ },
+ {
    "metric": "Diet",
    "order": 20,
    "activated": true,

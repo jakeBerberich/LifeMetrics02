@@ -39,8 +39,6 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         pickerView.delegate = self
         pickerView.dataSource = self
         inzInitalValues()
-        
-        
     }
     
         func buildPickerData() {

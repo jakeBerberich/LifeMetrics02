@@ -178,5 +178,17 @@
  "attribute": "Fair",
  "factor": 6,
  "defaultUI": false
+ },
+ {
+ "metricItem": "Eat at Home",
+ "attribute": "Yes",
+ "factor": 10,
+ "defaultUI": false
+ },
+ {
+ "metricItem": "Eat at Home",
+ "attribute": "No",
+ "factor": 0,
+ "defaultUI": false
  }
  ]

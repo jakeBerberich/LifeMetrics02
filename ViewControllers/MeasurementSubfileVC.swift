@@ -15,7 +15,7 @@ class MeasurementSubfileVC: UITableViewController {
     var allDailyArray = [DailySummary]()
     
     
-    @IBOutlet weak var categoryLabel: UILabel!
+  
     let remoteJobs = RemoteFunctions() // create instance for call remote functions
     
     
@@ -23,19 +23,12 @@ class MeasurementSubfileVC: UITableViewController {
         super.viewDidLoad()
      returnDailySummary()
     }
-   
-    
-    
-    
+
     func returnDailySummary() { // decode Json to
         allDailyArray =  remoteJobs.returnStoredData()
         
     }
-    
 
-    
-  
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,8 +49,8 @@ class MeasurementSubfileVC: UITableViewController {
         // Configure the cell...
         let metricRow = self.allDailyArray[indexPath.row]
         
-        cell.textLabel?.text = metricRow.forDate
-        cell.detailTextLabel?.text = ("\(metricRow.totalScore)   \( metricRow.dayName)")
+        cell.textLabel?.text = ("\( metricRow.dayName)  \(metricRow.forDate)")
+        cell.detailTextLabel?.text = ("Total Score:  \(metricRow.totalScore)  ")
         return cell
     }
     

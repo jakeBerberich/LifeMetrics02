@@ -24,9 +24,14 @@ class FirstViewController: UIViewController {
 
 
     @IBAction func testRestoreFromUserData(_ sender: Any) {
+        Alert.showBasic(title: "Retrieve Data", message: "you are about to retrieve", vc: self)
       let restoredDaily =  remoteJobs.returnStoredData()
         let restoredDetail = remoteJobs.returnDailyDetail()
-        print(restoredDetail)
+       
+    }
+    
+    func firstRun() {
+        
     }
 }
 

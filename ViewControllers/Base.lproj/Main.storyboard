@@ -189,7 +189,7 @@
             </objects>
             <point key="canvasLocation" x="2134" y="504"/>
         </scene>
-        <!--Categories-->
+        <!--Score Detail History-->
         <scene sceneID="8EC-fU-SIW">
             <objects>
                 <tableViewController id="Vf0-Ff-Q51" customClass="CategorySubfileVC" customModule="LifeMetrics02" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,7 +235,7 @@
                             <outlet property="delegate" destination="Vf0-Ff-Q51" id="HKY-mA-Tsb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categories" id="Xu7-Wn-134">
+                    <navigationItem key="navigationItem" title="Score Detail History" id="Xu7-Wn-134">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="wOK-E5-35g"/>
                     </navigationItem>
                 </tableViewController>

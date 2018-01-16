@@ -20,7 +20,9 @@ class RemoteFunctions {
 //----------------------------------------------------------------------------------------------------------------------------
     func returnStoredData()-> [DailySummary] {
         // return a stored json string from userDefaults
-        var getBack = UserDefaults.standard.object(forKey: allDailySummaryKey) as!  String
+        
+            var getBack = UserDefaults.standard.object(forKey: allDailySummaryKey) as!  String
+        
         print("return from User Defaults \(getBack)")
         // the returned string has an extra set of [] that need to be droped
         let sliced = String(getBack.characters.dropFirst())
