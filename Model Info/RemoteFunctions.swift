@@ -58,7 +58,7 @@ class RemoteFunctions {
                     print("encoding the string \(jsonString)")
         
                     UserDefaults.standard.set(jsonString, forKey: allDailySummaryKey)
-                }
+                    UserDefaults.standard.synchronize()                }
         
             } catch { print("error in encoding")
         
@@ -74,6 +74,7 @@ class RemoteFunctions {
                 print("encoding the string \(jsonString)")
                 
                 UserDefaults.standard.set(jsonString, forKey: allDailyDetailKey)
+                UserDefaults.standard.synchronize()
             }
             
         } catch { print("error in encoding")

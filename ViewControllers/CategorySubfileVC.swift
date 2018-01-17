@@ -21,8 +21,11 @@ var allDailyMetricArray = [DailyMetric]()
     override func viewDidLoad() {
         super.viewDidLoad()
         returnAllDailyMetrics()
+        tableView.reloadData()
         
     }
+    
+    
     func returnAllDailyMetrics() { // decode Json to arrays
         allDailyMetricArray = remoteJobs.returnDailyDetail()
     }

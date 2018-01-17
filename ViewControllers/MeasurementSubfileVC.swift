@@ -22,6 +22,8 @@ class MeasurementSubfileVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      returnDailySummary()
+        tableView.reloadData()
+        
     }
 
     func returnDailySummary() { // decode Json to

@@ -9,6 +9,11 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    var allDailyMetricArray = [DailyMetric]()
+    var allDailySummary = [DailySummary]()
+    
+    
     @IBOutlet weak var restoreDailyLabel: UIButton!
     
     let remoteJobs = RemoteFunctions() // create instance for call remote functions
@@ -30,7 +35,21 @@ class FirstViewController: UIViewController {
        
     }
     
+    @IBAction func inz(_ sender: Any) {
+        
+        firstRun()
+    }
+    
+    
     func firstRun() {
+        var dailySummary01 = DailySummary(forDate: "1954-11-02", dayName: "Tuesday", totalScore: 38)
+        allDailySummary.append(dailySummary01)
+        remoteJobs.writeJsonToStorage(inArray: allDailySummary) // store data locally
+        
+        var dailyMetric01 = DailyMetric(category: "*INZ", metric: "first", score: 5, forDate: "1954-11-02", dayName: "Tuesday")
+        allDailyMetricArray.append(dailyMetric01)
+        remoteJobs.dailyDetailToStorage(inArray: allDailyMetricArray)
+        
         
     }
 }
