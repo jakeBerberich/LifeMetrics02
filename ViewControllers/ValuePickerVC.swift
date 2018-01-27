@@ -27,6 +27,7 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var selectedDate: UILabel!
+    @IBOutlet weak var dayOfWeek: UILabel!
     
     var metricItemArray = [metricItems]()   // raw values from Json
     var metricCategoryArray = [metricCategory]()  // raw values from Json
@@ -66,10 +67,10 @@ class ValuePickerVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         formatter.dateFormat = "yyyy-MM-dd"
         formatterDayOfWeek.dateFormat = "EEEE"
         selectedDate.text = formatter.string(from: datePicker.date)
-       
         dateToReturn = formatter.string(from: datePicker.date)
         dayNameToReturn = formatterDayOfWeek.string(from: datePicker.date)
 //        print(dayNameToReturn)
+        dayOfWeek.text = dayNameToReturn
         
     }
     

@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 
-class MeasurementSubfileVC: UITableViewController {
+class DailyScoresSubfileVC: UITableViewController {
     
- 
+    var filterThisDate: String?
+    
     var allDailyArray = [DailySummary]()
-    
+   
     
   
     let remoteJobs = RemoteFunctions() // create instance for call remote functions
@@ -28,6 +29,12 @@ class MeasurementSubfileVC: UITableViewController {
 
     func returnDailySummary() { // decode Json to
         allDailyArray =  remoteJobs.returnStoredData()
+        
+        
+        
+        allDailyArray.sort(by: {$0.forDate > $1.forDate}) // for UI
+        
+        tableView.reloadData()
         
     }
 
@@ -54,6 +61,14 @@ class MeasurementSubfileVC: UITableViewController {
         cell.textLabel?.text = ("\( metricRow.dayName)  \(metricRow.forDate)")
         cell.detailTextLabel?.text = ("Total Score:  \(metricRow.totalScore)  ")
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = self.tableView.indexPathForSelectedRow
+        let destinationVC = segue.destination as! DetailScoreHistoryVC
+        destinationVC.filterThisDate = self.allDailyArray[indexPath!.row].forDate
+      //  print(self.allDailyArray[indexPath!.row].forDate)
+        
     }
     
     

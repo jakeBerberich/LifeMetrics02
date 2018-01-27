@@ -62,6 +62,9 @@ class ChoiceSummarySubfileVC: UITableViewController {
             allDailyMetricArray.append(item)
         }
         remoteJobs.dailyDetailToStorage(inArray: allDailyMetricArray)
+        dailyMetricArray.removeAll()
+       tableView.reloadData()
+        dismiss(animated: true, completion: nil)
     }
 
  

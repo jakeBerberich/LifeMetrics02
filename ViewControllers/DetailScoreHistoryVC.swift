@@ -8,10 +8,11 @@
 
 import UIKit
 
-class CategorySubfileVC: UITableViewController {
+class DetailScoreHistoryVC: UITableViewController {
     
-var allDailyMetricArray = [DailyMetric]()
-    
+    var allDailyMetricArray = [DailyMetric]()
+    var filterThisDate: String?
+    //var thisDateArray: DailyMetric
     
      let remoteJobs = RemoteFunctions() // create instance for call remote functions
     
@@ -28,6 +29,8 @@ var allDailyMetricArray = [DailyMetric]()
     
     func returnAllDailyMetrics() { // decode Json to arrays
         allDailyMetricArray = remoteJobs.returnDailyDetail()
+        let thisDateArray = allDailyMetricArray.filter({return $0.forDate == filterThisDate})
+        allDailyMetricArray = thisDateArray
     }
     
     
@@ -51,8 +54,8 @@ var allDailyMetricArray = [DailyMetric]()
         // Configure the cell...
         let categoryRow = self.allDailyMetricArray[indexPath.row]
         // cell.categoryLabel?.text = categoryRow.metric
-        cell.textLabel?.text = ("Category: \(categoryRow.category)  \(categoryRow.forDate)")
-        cell.detailTextLabel?.text = categoryRow.dayName
+        cell.textLabel?.text = ("\(categoryRow.category)  Metric: \(categoryRow.metric)  Score: \(categoryRow.score)")
+        cell.detailTextLabel?.text = (" \(categoryRow.forDate)  \(categoryRow.dayName)  ")
         return cell
     }
     

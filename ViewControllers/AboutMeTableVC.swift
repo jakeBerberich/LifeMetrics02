@@ -10,6 +10,11 @@ import UIKit
 
 class AboutMeTableVC: UITableViewController {
 
+    var allDailyArray = [DailySummary]()
+    
+    let remoteJobs = RemoteFunctions()
+    
+    
     @IBOutlet weak var myNameLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
     @IBOutlet weak var sinceBornLabel: UILabel!
@@ -45,9 +50,26 @@ class AboutMeTableVC: UITableViewController {
         agePhoenixLabel.text = String(describing: sinceStart!)
         let weight = aboutMe.currentBodyWeight
         let height = aboutMe.heightInches
-        let bmi = (weight*703)/height
+        let bmi = (weight*703)/(height * height)
         print(bmi)
         bmiLabel.text = String(bmi)
+        
+        let highScore: Int
+        let lowScore: Int
+        let highScoreDate: String
+        let lowScoreDate: String
+        
+        allDailyArray =  remoteJobs.returnStoredData()
+        
+        allDailyArray.sort(by: {$0.totalScore > $1.totalScore && $0.forDate > $1.forDate})
+        highScore = allDailyArray[0].totalScore
+        highScoreDate = allDailyArray[0].forDate
+        
+        allDailyArray.sort(by: {$0.totalScore <  $1.totalScore && $0.forDate > $1.forDate})
+        lowScore = allDailyArray[0].totalScore
+        lowScoreDate = allDailyArray[0].forDate
+        
+        
         
         
         

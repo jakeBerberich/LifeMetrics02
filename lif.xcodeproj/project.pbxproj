@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		004F54371FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */; };
+		004F54371FF7FDBA00E0AED4 /* DailyScoresSubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54361FF7FDBA00E0AED4 /* DailyScoresSubfileVC.swift */; };
 		004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54381FF920D000E0AED4 /* ValuePickerVC.swift */; };
 		004F545F200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */; };
 		004F5461200A88D100E0AED4 /* AboutMeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F5460200A88D100E0AED4 /* AboutMeTableVC.swift */; };
@@ -18,7 +18,7 @@
 		006CC0DF1FF68A070071A182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006CC0DE1FF68A070071A182 /* Assets.xcassets */; };
 		006CC0E21FF68A070071A182 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006CC0E01FF68A070071A182 /* LaunchScreen.storyboard */; };
 		006CC0EF1FF68BF80071A182 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0EE1FF68BF80071A182 /* Structures.swift */; };
-		006CC0F71FF69F7B0071A182 /* CategorySubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0F61FF69F7B0071A182 /* CategorySubfileVC.swift */; };
+		006CC0F71FF69F7B0071A182 /* DetailScoreHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CC0F61FF69F7B0071A182 /* DetailScoreHistoryVC.swift */; };
 		006CC0FB1FF6A8210071A182 /* metric.json in Resources */ = {isa = PBXBuildFile; fileRef = 006CC0FA1FF6A8210071A182 /* metric.json */; };
 		006CC1011FF6C6680071A182 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 006CC1001FF6C6680071A182 /* category.json */; };
 		00DC5256200BA48700B52D6C /* RemoteFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5255200BA48700B52D6C /* RemoteFunctions.swift */; };
@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementSubfileVC.swift; sourceTree = "<group>"; };
+		004F54361FF7FDBA00E0AED4 /* DailyScoresSubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScoresSubfileVC.swift; sourceTree = "<group>"; };
 		004F54381FF920D000E0AED4 /* ValuePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePickerVC.swift; sourceTree = "<group>"; };
 		004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceSummarySubfileVC.swift; sourceTree = "<group>"; };
 		004F5460200A88D100E0AED4 /* AboutMeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeTableVC.swift; sourceTree = "<group>"; };
@@ -39,7 +39,7 @@
 		006CC0E11FF68A070071A182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		006CC0E31FF68A070071A182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		006CC0EE1FF68BF80071A182 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
-		006CC0F61FF69F7B0071A182 /* CategorySubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySubfileVC.swift; sourceTree = "<group>"; };
+		006CC0F61FF69F7B0071A182 /* DetailScoreHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScoreHistoryVC.swift; sourceTree = "<group>"; };
 		006CC0FA1FF6A8210071A182 /* metric.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = metric.json; sourceTree = "<group>"; };
 		006CC1001FF6C6680071A182 /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
 		00DC5255200BA48700B52D6C /* RemoteFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFunctions.swift; sourceTree = "<group>"; };
@@ -92,8 +92,8 @@
 				004F54381FF920D000E0AED4 /* ValuePickerVC.swift */,
 				006CC0DB1FF68A070071A182 /* Main.storyboard */,
 				006CC0E01FF68A070071A182 /* LaunchScreen.storyboard */,
-				006CC0F61FF69F7B0071A182 /* CategorySubfileVC.swift */,
-				004F54361FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift */,
+				006CC0F61FF69F7B0071A182 /* DetailScoreHistoryVC.swift */,
+				004F54361FF7FDBA00E0AED4 /* DailyScoresSubfileVC.swift */,
 				004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */,
 				004F5460200A88D100E0AED4 /* AboutMeTableVC.swift */,
 			);
@@ -201,10 +201,10 @@
 				004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */,
 				006CC0D61FF68A070071A182 /* AppDelegate.swift in Sources */,
 				006CC0D81FF68A070071A182 /* FirstViewController.swift in Sources */,
-				006CC0F71FF69F7B0071A182 /* CategorySubfileVC.swift in Sources */,
+				006CC0F71FF69F7B0071A182 /* DetailScoreHistoryVC.swift in Sources */,
 				004F5461200A88D100E0AED4 /* AboutMeTableVC.swift in Sources */,
 				00DC5258200D395900B52D6C /* Alert.swift in Sources */,
-				004F54371FF7FDBA00E0AED4 /* MeasurementSubfileVC.swift in Sources */,
+				004F54371FF7FDBA00E0AED4 /* DailyScoresSubfileVC.swift in Sources */,
 				006CC0EF1FF68BF80071A182 /* Structures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

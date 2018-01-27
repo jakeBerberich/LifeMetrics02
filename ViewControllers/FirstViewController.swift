@@ -37,20 +37,20 @@ class FirstViewController: UIViewController {
     
     @IBAction func inz(_ sender: Any) {
         
-        firstRun()
+      //  firstRun()
     }
     
     
-    func firstRun() {
-        var dailySummary01 = DailySummary(forDate: "1954-11-02", dayName: "Tuesday", totalScore: 38)
-        allDailySummary.append(dailySummary01)
-        remoteJobs.writeJsonToStorage(inArray: allDailySummary) // store data locally
-        
-        var dailyMetric01 = DailyMetric(category: "*INZ", metric: "first", score: 5, forDate: "1954-11-02", dayName: "Tuesday")
-        allDailyMetricArray.append(dailyMetric01)
-        remoteJobs.dailyDetailToStorage(inArray: allDailyMetricArray)
-        
-        
-    }
+//    func firstRun() {
+//        var dailySummary01 = DailySummary(forDate: "1954-11-02", dayName: "Tuesday", totalScore: 38)
+//        allDailySummary.append(dailySummary01)
+//        remoteJobs.writeJsonToStorage(inArray: allDailySummary) // store data locally
+//
+//        var dailyMetric01 = DailyMetric(category: "*INZ", metric: "first", score: 5, forDate: "1954-11-02", dayName: "Tuesday")
+//        allDailyMetricArray.append(dailyMetric01)
+//        remoteJobs.dailyDetailToStorage(inArray: allDailyMetricArray)
+//
+//
+//    }
 }
 
