@@ -22,6 +22,8 @@ class AboutMeTableVC: UITableViewController {
     @IBOutlet weak var ageDatesLabel: UILabel!
     @IBOutlet weak var agePhoenixLabel: UILabel!
     @IBOutlet weak var bmiLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var lowScoreLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAboutMe()
@@ -61,15 +63,16 @@ class AboutMeTableVC: UITableViewController {
         
         allDailyArray =  remoteJobs.returnStoredData()
         
-        allDailyArray.sort(by: {$0.totalScore > $1.totalScore && $0.forDate > $1.forDate})
+        allDailyArray.sort(by: {$0.totalScore > $1.totalScore  })
         highScore = allDailyArray[0].totalScore
         highScoreDate = allDailyArray[0].forDate
         
-        allDailyArray.sort(by: {$0.totalScore <  $1.totalScore && $0.forDate > $1.forDate})
-        lowScore = allDailyArray[0].totalScore
-        lowScoreDate = allDailyArray[0].forDate
+        allDailyArray.sort(by: {$0.totalScore <  $1.totalScore  })
+        lowScore = allDailyArray[1].totalScore
+        lowScoreDate = allDailyArray[1].forDate
         
-        
+        highScoreLabel.text = (" \(highScore) on  \(highScoreDate)" )
+        lowScoreLabel.text = (" \(lowScore)  on  \(lowScoreDate)" )
         
         
         
@@ -84,7 +87,7 @@ class AboutMeTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 6
         
     }
 

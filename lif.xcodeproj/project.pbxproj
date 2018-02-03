@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002984172026427800CAB61C /* FixDayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002984162026427800CAB61C /* FixDayVC.swift */; };
 		004F54371FF7FDBA00E0AED4 /* DailyScoresSubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54361FF7FDBA00E0AED4 /* DailyScoresSubfileVC.swift */; };
 		004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F54381FF920D000E0AED4 /* ValuePickerVC.swift */; };
 		004F545F200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		002984162026427800CAB61C /* FixDayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixDayVC.swift; sourceTree = "<group>"; };
 		004F54361FF7FDBA00E0AED4 /* DailyScoresSubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScoresSubfileVC.swift; sourceTree = "<group>"; };
 		004F54381FF920D000E0AED4 /* ValuePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuePickerVC.swift; sourceTree = "<group>"; };
 		004F545E200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceSummarySubfileVC.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				006CC0D71FF68A070071A182 /* FirstViewController.swift */,
 				004F54381FF920D000E0AED4 /* ValuePickerVC.swift */,
 				006CC0DB1FF68A070071A182 /* Main.storyboard */,
+				002984162026427800CAB61C /* FixDayVC.swift */,
 				006CC0E01FF68A070071A182 /* LaunchScreen.storyboard */,
 				006CC0F61FF69F7B0071A182 /* DetailScoreHistoryVC.swift */,
 				004F54361FF7FDBA00E0AED4 /* DailyScoresSubfileVC.swift */,
@@ -157,7 +160,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 006CC0CD1FF68A070071A182 /* Build configuration list for PBXProject "LifeMetrics02" */;
+			buildConfigurationList = 006CC0CD1FF68A070071A182 /* Build configuration list for PBXProject "lif" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -198,6 +201,7 @@
 				00DC5256200BA48700B52D6C /* RemoteFunctions.swift in Sources */,
 				006CC0DA1FF68A070071A182 /* SecondViewController.swift in Sources */,
 				004F545F200A468F00E0AED4 /* ChoiceSummarySubfileVC.swift in Sources */,
+				002984172026427800CAB61C /* FixDayVC.swift in Sources */,
 				004F54391FF920D000E0AED4 /* ValuePickerVC.swift in Sources */,
 				006CC0D61FF68A070071A182 /* AppDelegate.swift in Sources */,
 				006CC0D81FF68A070071A182 /* FirstViewController.swift in Sources */,
@@ -371,7 +375,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		006CC0CD1FF68A070071A182 /* Build configuration list for PBXProject "LifeMetrics02" */ = {
+		006CC0CD1FF68A070071A182 /* Build configuration list for PBXProject "lif" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				006CC0E41FF68A070071A182 /* Debug */,
